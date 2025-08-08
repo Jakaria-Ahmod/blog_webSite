@@ -1,13 +1,16 @@
 type Title = {
   children: string;
   className: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const CommonBtn: React.FC<Title> = ({ children, className }) => {
+const CommonBtn: React.FC<Title> = ({ children, className, onClick }) => {
   return (
     <div>
       <div>
-        <button className={className}>{children}</button>
+        <button onClick={onClick} className={className}>
+          {children}
+        </button>
       </div>
     </div>
   );
