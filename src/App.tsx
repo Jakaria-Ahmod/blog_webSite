@@ -4,8 +4,8 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import SingleBlog from './pages/Home/SingleBlog';
 import NotFound from './pages/NotFound';
+import SingleBlog from './pages/SingleBlog';
 const App = () => {
   const router = createBrowserRouter([
     {

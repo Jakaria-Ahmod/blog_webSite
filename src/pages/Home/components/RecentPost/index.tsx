@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import BlogCard from '../../../../globalComponents/BlogCard';
 import CommonBtn from '../../../../globalComponents/CommonBtn';
@@ -6,6 +7,9 @@ import Post from './components/RecentPostLayout/Post';
 import PostLeft from './components/RecentPostLayout/PostLeft';
 
 const RecentPost: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const naviget = useNavigate();
   const handleroute = () => {
     naviget('/blog');

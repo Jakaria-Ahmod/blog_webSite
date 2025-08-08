@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
-import BlogCard from '../../../globalComponents/BlogCard';
-import CommonBtn from '../../../globalComponents/CommonBtn';
-import CTA from '../components/CTA';
-import { resentPost } from '../components/RecentPost/components/RecentApi';
+import BlogCard from '../../globalComponents/BlogCard';
+import CommonBtn from '../../globalComponents/CommonBtn';
+import CTA from '../Home/components/CTA';
+import { resentPost } from '../Home/components/RecentPost/components/RecentApi';
 
 const SingleBlog: React.FC = () => {
   const naviget = useNavigate();
@@ -11,6 +11,9 @@ const SingleBlog: React.FC = () => {
     naviget('/blog');
   };
   const { id } = useParams();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
   interface singleBlog {
     Tarvel: string;
     date: string;

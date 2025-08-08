@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router';
 
 interface BlogCard {
@@ -17,9 +18,12 @@ const BlogCard: React.FC<BlogCard> = ({
   description,
   id,
 }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="h-[630px] bg-white overflow-hidden">
-      <div className="">
+      <div className=" h-[252px]">
         <img
           src={img}
           alt="blogImg"
