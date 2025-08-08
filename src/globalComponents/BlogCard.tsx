@@ -1,34 +1,44 @@
-import blogImg from '../assets/img/blogImg.png';
+interface BlogCard {
+  img: string;
+  Tarvel: string;
+  date: string;
+  title: string;
+  description: string;
+}
 
-const BlogCard: React.FC = () => {
+const BlogCard: React.FC<BlogCard> = ({
+  img,
+  Tarvel,
+  title,
+  date,
+  description,
+}) => {
   return (
-    <section className="w-[400px] h-[630px] bg-white overflow-hidden">
-      <div className="w-[400px] h-[360px]">
+    <section className="h-[630px] bg-white overflow-hidden">
+      <div className="">
         <img
-          src={blogImg}
+          src={img}
           alt="blogImg"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-md"
         />
       </div>
       <div className="mt-[40px]">
         <div className="flex gap-x-3 items-center">
           <span className="text-balck01 font-Roboto text-[12px] font-bold leading-[18px]">
-            Travel
+            {Tarvel}
           </span>
           <span className="text-[#999999] font-Roboto text-[12px] font-bold leading-[18px]">
-            13 March 2023
+            {date}
           </span>
         </div>
         <div className="mt-[16px]">
           <h2 className="text-balck01 font-Roboto text-[24px] font-bold leading-[31px] capitalize">
-            8 Rules of Travelling In Sea You Need To Know
+            {title.substring(0, 50)}...
           </h2>
         </div>
         <div>
           <p className="font-Roboto text-[#666666] text-base leading-[24px] mt-[7px]">
-            Travelling in sea has many advantages. Some of the advantages of
-            transporting goods by sea include: you can ship large volumes at
-            costs
+            {description.substring(0, 150)}
           </p>
         </div>
         <div className="mt-[19px]">
