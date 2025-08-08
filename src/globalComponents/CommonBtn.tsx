@@ -1,4 +1,9 @@
-const CommonBtn = ({ children, className }) => {
+type Title = {
+  children: string;
+  className: string;
+};
+
+const CommonBtn: React.FC<Title> = ({ children, className }) => {
   return (
     <div>
       <div>
