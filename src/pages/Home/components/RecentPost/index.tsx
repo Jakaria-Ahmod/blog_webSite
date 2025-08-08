@@ -35,6 +35,7 @@ const RecentPost: React.FC = () => {
               <div>
                 <BlogCard
                   img={item?.img}
+                  id={item?.id}
                   Tarvel={item?.Tarvel}
                   date={item?.date}
                   title={item?.title}

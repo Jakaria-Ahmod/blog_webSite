@@ -6,7 +6,9 @@ const RootComponetns: React.FC = () => {
   return (
     <div>
       <div>
-        <Heder></Heder>
+        <div className="shadow">
+          <Heder></Heder>
+        </div>
         <Outlet></Outlet>
         <Footer></Footer>
       </div>

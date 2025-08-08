@@ -27,9 +27,10 @@ const PopularPost: React.FC = () => {
             <div>
               <div className="grid grid-cols-3 gap-6 mt-[63px]">
                 {resentPost.slice(0, 9).map(item => (
-                  <div>
+                  <div key={item?.id}>
                     <BlogCard
                       img={item?.img}
+                      id={item?.id}
                       Tarvel={item?.Tarvel}
                       date={item?.date}
                       title={item?.title}

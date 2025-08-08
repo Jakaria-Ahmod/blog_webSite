@@ -1,9 +1,12 @@
+import { Link } from 'react-router';
+
 interface BlogCard {
   img: string;
   Tarvel: string;
   date: string;
   title: string;
   description: string;
+  id: number;
 }
 
 const BlogCard: React.FC<BlogCard> = ({
@@ -12,6 +15,7 @@ const BlogCard: React.FC<BlogCard> = ({
   title,
   date,
   description,
+  id,
 }) => {
   return (
     <section className="h-[630px] bg-white overflow-hidden">
@@ -42,9 +46,12 @@ const BlogCard: React.FC<BlogCard> = ({
           </p>
         </div>
         <div className="mt-[19px]">
-          <button className="text-primary font-Roboto text-[18px] font-bold leading-[27px] underline cursor-pointer">
+          <Link
+            to={`/single-blog/${id}`}
+            className="text-primary font-Roboto text-[18px] font-bold leading-[27px] underline cursor-pointer"
+          >
             Read More...
-          </button>
+          </Link>
         </div>
       </div>
     </section>
