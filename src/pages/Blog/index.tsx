@@ -1,8 +1,9 @@
+import type React from 'react';
 import BlogCard from '../../globalComponents/BlogCard';
 import CTA from '../Home/components/CTA';
 import { resentPost } from '../Home/components/RecentPost/components/RecentApi';
 
-const Blog = () => {
+const Blog: React.FC = () => {
   return (
     <section>
       <div className=" text-center container">
