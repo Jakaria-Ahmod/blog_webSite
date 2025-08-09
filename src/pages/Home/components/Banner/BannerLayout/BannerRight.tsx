@@ -3,7 +3,7 @@ import bannerImg from '../../../../../assets/img/banner.png';
 const BannerRight: React.FC = () => {
   return (
     <div>
-      <div className="w-[610px] h-[575px] bg-amber-700 rounded-[16px]">
+      <div className="w-[610px] h-[575px] rounded-[16px]">
         <img
           src={bannerImg}
           alt="bannerImg"
