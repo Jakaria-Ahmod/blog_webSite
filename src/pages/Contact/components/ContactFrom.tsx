@@ -41,102 +41,120 @@ const ContactFrom: React.FC = () => {
         toast.error('Please Enter Your message');
         return;
       }
-
       console.log(values);
-      formik.resetForm(); // ✅ reset form after submit
+      formik.resetForm();
     },
   });
 
   return (
     <div>
-      <div>
-        <form
-          className="py-[71px] px-[61px] shadow-2xl w-[768px] mx-auto auto-rows-min gap-y-6"
-          onSubmit={formik.handleSubmit}
-        >
-          <div className="grid grid-cols-2 gap-x-4">
-            <div>
-              <label className="block text-balck01 text-base font-semibold leading-[28px] mb-[8px]">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                onChange={formik.handleChange}
-                value={formik.values.name}
-                placeholder="Enter Your Name"
-                className="p-5 rounded-md border-gray-400 w-full outline-0 border"
-              />
-            </div>
+      <form
+        className="py-16 px-6 shadow-2xl max-w-3xl mx-auto gap-y-6 grid grid-cols-1 md:grid-cols-2 md:gap-x-6"
+        onSubmit={formik.handleSubmit}
+      >
+        {/* Name */}
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-balck01 text-base font-semibold leading-7 mb-2"
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            onChange={formik.handleChange}
+            value={formik.values.name}
+            placeholder="Enter Your Name"
+            className="p-4 rounded-md border border-gray-400 w-full outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
 
-            <div>
-              <label className="block text-balck01 text-base font-semibold leading-[28px] mb-[8px]">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-                placeholder="Enter Your Email"
-                className="p-5 rounded-md border-gray-400 w-full border outline-0"
-              />
-            </div>
+        {/* Email */}
+        <div>
+          <label
+            htmlFor="email"
+            className="block text-balck01 text-base font-semibold leading-7 mb-2"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            placeholder="Enter Your Email"
+            className="p-4 rounded-md border border-gray-400 w-full outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
 
-            <div>
-              <label className="block text-balck01 text-base font-semibold leading-[28px] mb-[8px]">
-                Phone
-              </label>
-              <input
-                type="number"
-                id="phone"
-                name="phone"
-                onChange={formik.handleChange}
-                value={formik.values.phone}
-                placeholder="Enter Your Phone"
-                className="p-5 rounded-md border-gray-400 w-full border outline-0"
-              />
-            </div>
+        {/* Phone */}
+        <div>
+          <label
+            htmlFor="phone"
+            className="block text-balck01 text-base font-semibold leading-7 mb-2"
+          >
+            Phone
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            onChange={formik.handleChange}
+            value={formik.values.phone}
+            placeholder="Enter Your Phone"
+            className="p-4 rounded-md border border-gray-400 w-full outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
 
-            <div>
-              <label className="block text-balck01 text-base font-semibold leading-[28px] mb-[8px]">
-                Subject
-              </label>
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                onChange={formik.handleChange}
-                value={formik.values.subject}
-                placeholder="Enter Your Subject"
-                className="p-5 rounded-md border-gray-400 w-full border outline-0"
-              />
-            </div>
-          </div>
+        {/* Subject */}
+        <div>
+          <label
+            htmlFor="subject"
+            className="block text-balck01 text-base font-semibold leading-7 mb-2"
+          >
+            Subject
+          </label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            onChange={formik.handleChange}
+            value={formik.values.subject}
+            placeholder="Enter Your Subject"
+            className="p-4 rounded-md border border-gray-400 w-full outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
 
-          <div className="row-span-2 mt-[22px]">
-            <label className="block text-balck01 text-base font-semibold leading-[28px] mb-[8px]">
-              Message
-            </label>
-            <textarea
-              placeholder="Enter Your Message"
-              onChange={formik.handleChange}
-              id="message"
-              name="message"
-              value={formik.values.message}
-              className="p-5 rounded-md border-gray-400 h-[200px] w-full border outline-0 resize-none"
-            />
-          </div>
-          <div>
-            <CommonBtn
-              children="Send Message"
-              className="bg-primary py-[16px] px-[48px] text-white font-Ralwway text-sm font-semibold leading-[24px] rounded-[4px] cursor-pointer mt-[22px] mx-auto block"
-            />
-          </div>
-        </form>
-      </div>
+        {/* Message */}
+        <div className="md:col-span-2 mt-4">
+          <label
+            htmlFor="message"
+            className="block text-balck01 text-base font-semibold leading-7 mb-2"
+          >
+            Message
+          </label>
+          <textarea
+            placeholder="Enter Your Message"
+            onChange={formik.handleChange}
+            id="message"
+            name="message"
+            value={formik.values.message}
+            className="p-4 rounded-md border border-gray-400 w-full h-48 resize-none outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <div className="md:col-span-2 flex justify-center mt-6">
+          <CommonBtn
+            // type="submit"
+            children="Send Message"
+            className="bg-primary py-4 px-12 text-white font-Ralwway text-sm font-semibold leading-6 rounded-md cursor-pointer"
+          />
+        </div>
+      </form>
     </div>
   );
 };

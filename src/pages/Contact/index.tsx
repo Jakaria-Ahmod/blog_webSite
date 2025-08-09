@@ -6,26 +6,27 @@ import ContactHeding from './components/ContactHeding';
 
 const Contact: React.FC = () => {
   return (
-    <section className="">
-      <div className="container ">
+    <section>
+      <div className="container">
         <div className="flex items-center justify-center mt-[106px]">
-          <ContactHeding></ContactHeding>
+          <ContactHeding />
         </div>
-        <div className="grid grid-cols-4 mt-[57px] gap-[23px]">
-          {ContactApi.map(item => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-[57px] gap-6">
+          {ContactApi.map((item, idx) => (
             <ContactCard
+              key={idx}
               img={item?.img}
               title={item?.title}
               descrption={item?.descripiton}
-            ></ContactCard>
+            />
           ))}
         </div>
         <div className="mt-[100px]">
-          <ContactFrom></ContactFrom>
+          <ContactFrom />
         </div>
       </div>
       <div className="mt-[100px]">
-        <CTA></CTA>
+        <CTA />
       </div>
     </section>
   );
