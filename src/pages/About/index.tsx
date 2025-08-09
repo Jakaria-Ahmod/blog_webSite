@@ -8,29 +8,29 @@ import Work from './components/Work';
 const About: React.FC = () => {
   return (
     <div>
-      <div className="container">
+      <div className="container mx-auto px-4">
         <div className="mt-[74px]">
-          <AboutHead></AboutHead>
+          <AboutHead />
         </div>
         <div>
-          <AboutImg></AboutImg>
+          <AboutImg />
         </div>
         <div className="mt-[100px]">
-          <Work></Work>
+          <Work />
         </div>
-        <div className="grid grid-cols-4 mt-[87px] gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-[87px] gap-6">
           {TemeCardApi.map(item => (
             <TemCard
+              key={item?.number}
               number={item?.number}
               title={item?.title}
               description={item?.description}
-            ></TemCard>
+            />
           ))}
         </div>
-        <div></div>
       </div>
       <div className="mt-[161px]">
-        <CTA></CTA>
+        <CTA />
       </div>
     </div>
   );

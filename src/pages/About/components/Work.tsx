@@ -2,22 +2,18 @@ import React from 'react';
 
 const Work: React.FC = () => {
   return (
-    <div>
-      <div className="grid grid-cols-2">
+    <div className="container mx-auto px-4 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <div>
-            <h2 className="text-[#666]  font-Roboto text-base font-bold leading-[24px] uppercase">
-              HOW WE WORK
-            </h2>
-            <div>
-              <h3 className="text-[#333] w-[500px] mt-[32px] font-Roboto text-[48px] font-bold leading-[63px]">
-                I will show you how our team works
-              </h3>
-            </div>
-          </div>
+          <h2 className="text-[#666] font-Roboto text-base font-bold leading-6 uppercase">
+            HOW WE WORK
+          </h2>
+          <h3 className="text-[#333] mt-8 font-Roboto text-3xl md:text-4xl font-bold leading-tight max-w-full md:max-w-lg">
+            I will show you how our team works
+          </h3>
         </div>
-        <div className="flex items-end justify-end">
-          <p className="text-[#666]  w-[416px] font-Roboto text-base font-normal leading-[24px]">
+        <div className="flex items-end justify-start md:justify-end">
+          <p className="text-[#666] font-Roboto text-base font-normal leading-6 max-w-full md:max-w-md">
             Bring to the table win-win market strategies to ensure perfect
             articles.
           </p>

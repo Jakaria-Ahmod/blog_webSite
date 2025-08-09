@@ -1,12 +1,13 @@
 import React from 'react';
-import aobutImg from '../../../assets/img/about.png';
+import aboutImg from '../../../assets/img/about.png';
+
 const AboutImg: React.FC = () => {
   return (
-    <div>
-      <div className="w-full h-[608px] rounded-md mt-[123px] overflow-hidden">
+    <div className="mt-[123px]">
+      <div className="w-full max-w-[900px] mx-auto h-[300px] sm:h-[450px] md:h-[608px] rounded-md overflow-hidden">
         <img
-          src={aobutImg}
-          alt="aobutImg"
+          src={aboutImg}
+          alt="aboutImg"
           className="w-full h-full object-cover"
         />
       </div>
