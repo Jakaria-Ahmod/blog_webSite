@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import Baner from './components/Banner';
-import CTA from './components/CTA';
-import PopularPost from './components/PopularPost';
-import RecentPost from './components/RecentPost';
-import Technology from './components/Technology';
+// import CTA from './components/CTA';
+// import PopularPost from './components/PopularPost';
+// import RecentPost from './components/RecentPost';
+// import Technology from './components/Technology';
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -13,10 +13,10 @@ const Home: React.FC = () => {
     <div>
       <div>
         <Baner></Baner>
-        <Technology></Technology>
-        <RecentPost></RecentPost>
-        <PopularPost></PopularPost>
-        <CTA></CTA>
+        {/* <Technology></Technology> */}
+        {/* <RecentPost></RecentPost> */}
+        {/* <PopularPost></PopularPost> */}
+        {/* <CTA></CTA> */}
       </div>
     </div>
   );

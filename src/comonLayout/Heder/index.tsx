@@ -2,9 +2,10 @@ import { Menu as MenuIcon, X } from 'lucide-react'; // hamburger icon
 import React from 'react';
 import Logo from './components/Logo';
 import Menu from './components/Menu';
+import MobileMenu from './components/MobileMenu';
 
 const Heder: React.FC = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
   return (
     <header className="sticky top-0 left-0 w-full bg-white shadow-sm z-50">
@@ -19,7 +20,7 @@ const Heder: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-800 focus:outline-none"
+          className="md:hidden text-gray-800 focus:outline-none cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <MenuIcon size={28} />}
@@ -29,7 +30,7 @@ const Heder: React.FC = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-inner">
-          <Menu />
+          <MobileMenu></MobileMenu>
         </div>
       )}
     </header>
